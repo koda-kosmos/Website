@@ -1,10 +1,4 @@
-html { 
-  background: url(bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 @font-face {
 	font-family: gt;
 	src: url(NotoSansMono-Medium.ttf);
@@ -36,8 +30,11 @@ html {
 
 
 body {
-
-	background-color: #000000;
+	  background: url(bg.jpg) no-repeat center center fixed; 
+ 	 -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
 	margin: 0;
 	padding: 0;
 /*				overflow: hidden;*/

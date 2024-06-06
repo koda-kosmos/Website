@@ -113,10 +113,11 @@ option {
 }
 
 .infoText{
-    color: #ffffff;
+    color: #000000;
     position: absolute;
-	width: 100%;
-    min-height: 100%;
+	margin: auto;
+	width: 50%;
+    min-height: 50%;
 	padding-left: 0vmin;
 	padding-right: 0vmin;
 	padding-top: 3vmax;

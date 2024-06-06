@@ -113,7 +113,7 @@ option {
 }
 
 .infoText{
-    color: #000000;
+    color: fe019a;
     position: absolute;
 	margin: auto;
 	width: 100%;
@@ -124,7 +124,7 @@ option {
     font-family: hanson;
 	text-decoration: none;
 	text-align: center;
-	font-size: 30vh;
+	font-size: 10vh;
 	font-weight: 400;
 	z-index: 9;
 }

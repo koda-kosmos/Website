@@ -137,9 +137,10 @@ img {
 
 .infoText h1 {
     font-weight: 600;
-    font-size: 4vh;
+    font-size: 30vh;
     padding-left: 0px;
     margin-left: 9.8vmin;
+	text-align: center;
 }
 
 .infoText h2 {

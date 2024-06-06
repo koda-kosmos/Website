@@ -120,7 +120,7 @@ option {
     min-height: 100%;
 	padding-left: 0vmin;
 	padding-right: 0vmin;
-	padding-top: 3vmax;
+	padding-top: 5vmax;
     font-family: hanson;
 	text-decoration: none;
 	text-align: center;
@@ -137,9 +137,9 @@ img {
 
 .infoText h1 {
     font-weight: 600;
-    font-size: 30vh;
+    font-size: 10vh;
     padding-left: 0px;
-    margin-left: 9.8vmin;
+    margin-left: 0vmin;
 	text-align: center;
 }
 

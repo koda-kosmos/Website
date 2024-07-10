@@ -84,8 +84,8 @@ option {
 	border: none;
 	border-radius: 0px;
 	margin: 0px;
-	color: #9A9A9A;
-	font-family: gt;
+	color: #131d75;
+	font-family: mono;
 	text-decoration: none;
 	pointer-events: auto; 
 }
@@ -96,13 +96,13 @@ option {
 
 .infoText{
     color: #fe019a;
-    position: absolute;
+    position: static;
 	margin: auto;
 	width: 100%;
     min-height: 100%;
 	padding-left: 0vmin;
 	padding-right: 0vmin;
-	padding-top: 5vmax;
+	padding-top: 40px;
     font-family: hanson;
 	text-decoration: none;
 	text-align: center;
@@ -129,18 +129,31 @@ img {
 	font-size: 2vh;
 	font-weight: normal;
     font-family: mono;
-    line-height: 1.5vmax;
-    margin-left: 40vmin;
-    margin-right: 40vmin;
+    line-height: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-block-start: 0px;
     margin-block-end: 2vmin;
     text-align: left;
     
 }
+.infoText h3 {
+	font-size: 2vh;
+	font-weight: normal;
+    font-family: mono;
+    line-height: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-block-start: 0px;
+    margin-block-end: 2vmin;
+    text-align: justify;
+    text-align-last: justify;
+    
+}
 
 .infoText a{
 	text-decoration: underline;
-	color: #ffffff;
+	color: #fe019a;
 }
 
 .infoText p {

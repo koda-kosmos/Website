@@ -135,6 +135,8 @@ img {
     margin-block-start: 0px;
     margin-block-end: 2vmin;
     text-align: left;
+    text-align: justify;
+    text-align-last: left;
     
 }
 .infoText h3 {

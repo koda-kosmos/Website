@@ -6,7 +6,7 @@
 
 @font-face {
 	font-family: mono;
-	src: url(NotoSansMono-Light.ttf);
+	src: url(NotoSansMono-ExtraBold.ttf);
 	font-weight: normal;
 	}
 
@@ -126,10 +126,10 @@ img {
 }
 
 .infoText h2 {
-	font-size: 2vh;
+	font-size: 3vh;
 	font-weight: normal;
     font-family: mono;
-    line-height: 1vmax;
+    line-height: 2vmax;
     margin-left: 40vmin;
     margin-right: 40vmin;
     margin-block-start: 0px;

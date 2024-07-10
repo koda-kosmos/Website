@@ -126,10 +126,10 @@ img {
 }
 
 .infoText h2 {
-	font-size: 3vh;
+	font-size: 2vh;
 	font-weight: normal;
     font-family: mono;
-    line-height: 2vmax;
+    line-height: 1.5vmax;
     margin-left: 40vmin;
     margin-right: 40vmin;
     margin-block-start: 0px;

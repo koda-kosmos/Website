@@ -5,27 +5,9 @@
 	}
 
 @font-face {
-	font-family: gt;
+	font-family: mono;
 	src: url(NotoSansMono-Light.ttf);
-	font-weight: light;
-	}
-
-@font-face {
-	font-family: gt;
-	src: url(NotoSansMono-Regular.ttf);
 	font-weight: normal;
-	}
-
-@font-face {
-	font-family: gt;
-	src: url(NotoSansMono-Bold.ttf);
-	font-weight: bold;
-	}
-
-@font-face {
-	font-family: gt;
-	src: url(NotoSansMono-Black.ttf);
-	font-weight: bolder;
 	}
 
 
@@ -145,13 +127,15 @@ img {
 
 .infoText h2 {
 	font-size: 2vh;
-	font-weight: 400;
+	font-weight: normal;
+    font-family: mono;
     line-height: 1vmax;
-    margin-left: 10vmin;
-    margin-right: 80vmin;
+    margin-left: 40vmin;
+    margin-right: 40vmin;
     margin-block-start: 0px;
     margin-block-end: 2vmin;
-    line-height: normal;
+    text-align: left;
+    
 }
 
 .infoText a{

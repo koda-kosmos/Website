@@ -102,7 +102,7 @@ option {
     min-height: 100%;
 	padding-left: 0vmin;
 	padding-right: 0vmin;
-	padding-top: 40px;
+	padding-top: 20vmin;
     font-family: hanson;
 	text-decoration: none;
 	text-align: center;
@@ -118,10 +118,10 @@ img {
 }
 
 .infoText h1 {
-    font-weight: 600;
     font-size: 16.4vmin;
     padding-left: 0px;
 	text-align: center;
+	line-height: 2.5vh;
 }
 
 .infoText h2 {
@@ -142,7 +142,7 @@ img {
 	font-size: 2vh;
 	font-weight: normal;
     font-family: mono;
-    line-height: 10px;
+    line-height: 2.5vh;
     margin-left: 20%;
     margin-right: 20%;
     margin-block-start: 0px;

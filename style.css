@@ -4,6 +4,8 @@
 
 body {
 	margin: 0;
+	overflow-x:hidden;
+
 }
 
 @font-face {
@@ -91,7 +93,6 @@ body {
 	font-weight: 600;
 	max-width: 100%;
 	overflow-x: hidden;
-	overflow: hidden;
 	font-family: inter;
 	src: url(inter.ttf);
 }

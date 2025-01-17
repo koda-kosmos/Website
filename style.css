@@ -6,6 +6,16 @@ body {
 	margin: 0;
 }
 
+@font-face {
+  font-family: hanson;
+  src: url(hanson.ttf);
+}
+
+@font-face {
+  font-family: inter;
+  src: url(inter.ttf);
+}
+
 .gjs-heading {
 	margin: 0;
 	color: rgba(29, 40, 55, 1);

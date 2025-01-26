@@ -886,7 +886,7 @@ body {
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 2000px) {
 	#ihctlz3 {
 		min-height: 0px;
 		display: none;

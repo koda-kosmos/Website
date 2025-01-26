@@ -888,7 +888,7 @@ body {
 @media only screen and (max-width: 1048px) {
 
 	#i5u1yn1 {
-		font-size: 3rem;
+		font-size: 6rem;
 	}
 		
 	#ihctlz3 {
@@ -947,5 +947,21 @@ body {
 	#i7biu0n {
 		min-height: 0px;
 		display: flex;
+	}
+
+	#iepmom {
+	font-size: 2rem;
+	}
+	#iokogzm {
+	font-size: 2rem;
+	}
+	#iciaxw {
+	font-size: 2rem;
+	}
+	#islsgh7 {
+	font-size: 2rem;
+	}
+	#inevx8b {
+	font-size: 2rem;
 	}
 }

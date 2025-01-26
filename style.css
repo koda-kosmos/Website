@@ -886,7 +886,7 @@ body {
 	}
 }
 
-@media (max-width:844px) {
+@media (max-width:480px) {
 	#ihctlz3 {
 		min-height: 0px;
 		display: none;

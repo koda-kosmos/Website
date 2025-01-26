@@ -886,6 +886,11 @@ body {
 }
 
 @media only screen and (max-width: 1048px) {
+
+	#i5u1yn1 {
+		font-size: 5rem;
+	}
+		
 	#ihctlz3 {
 		min-height: 0px;
 		display: none;

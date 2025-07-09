@@ -762,7 +762,7 @@ html, body {
     /* Textgrößen für Hauptinhalte */
     #about-text, #live-date-1, #live-date-2, #live-date-3, #live-link-1, #live-link-2, #live-link-3,
     #previous-shows-list-text, #contact-info-text {
-        font-size: 1rem;
+        font-size: 2rem;
         line-height: 1.5;
         padding: 5px 10px;
     }

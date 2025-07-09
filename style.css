@@ -4,7 +4,7 @@
 
 html, body {
     margin: 0;
-    padding: 0;
+   padding: 0;
     background: #000;
 }
 
@@ -88,6 +88,7 @@ html, body {
     position: static;
     z-index: 4;
     font-weight: 600;
+    font-size: 1vmax ;
     text-align: left;
     flex: 0 1 15%;
     font-family: hanson;
@@ -98,6 +99,7 @@ html, body {
     position: static;
     z-index: 4;
     font-weight: 600;
+    font-size: 1vmax ;
     text-align: center;
     flex: 0 1 15%;
     font-family: hanson;
@@ -108,6 +110,7 @@ html, body {
     position: static;
     z-index: 4;
     font-weight: 600;
+    font-size: 1vmax ;
     text-align: right;
     flex: 0 1 15%;
     font-family: hanson;
@@ -122,6 +125,9 @@ html, body {
     color: rgba(255, 255, 255, 1);
 }
 
+.desktop-long { display: inline; }
+.mobile-short { display: none; }
+
 #hero-section, #hero-content {
     width: 100vw;
     height: 100vh;
@@ -133,6 +139,7 @@ html, body {
     justify-content: center;
     flex-direction: column;
     padding: 0;
+    
 }
 
 #band-name-title {
@@ -144,7 +151,7 @@ html, body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 38px;
+    font-size: 5vh;
     pointer-events: none;
     font-family: hanson;
 }
@@ -214,6 +221,7 @@ html, body {
     align-self: auto;
     transition: color 0.3s ease 0s;
     font-family: hanson;
+    font-size: 1vmax ;
 }
 #nav-link-media {
     color: #ff0088;
@@ -225,6 +233,7 @@ html, body {
     align-self: auto;
     transition: color 0.3s ease 0s;
     font-family: hanson;
+    font-size: 1vmax ;
 }
 #nav-link-contact {
     color: #ff0088;
@@ -235,6 +244,7 @@ html, body {
     flex: 0 0 15%;
     align-self: auto;
     font-family: hanson;
+    font-size: 1vmax ;
 }
 #nav-link-live:hover {
     color: rgba(255, 255, 255, 1);
@@ -359,7 +369,7 @@ html, body {
 .live-show-location,
 .live-show-link {
     flex: 1; /* Nimmt gleichen Platz ein */
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #fff;
     padding: 0 5px; /* Kleiner horizontaler Abstand */
     text-align: left; /* Text linksbündig */
@@ -382,6 +392,15 @@ html, body {
     padding-right: 20px;
 }
 #previous-shows-content-container {
+    max-width: 1000px;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: auto;
+    flex: 1 1 0%;
+}
+#media-gallery-container {
     max-width: 1000px;
     align-items: stretch;
     display: flex;
@@ -421,12 +440,14 @@ html, body {
 }
 #media-content-container {
     max-width: 1000px;
-    align-items: stretch;
+    align-items: start;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-self: auto;
     flex: 1 1 0%;
+    width: 100%; 
+    min-width: 0;
 }
 #divider-media-top {
     background-color: #ff0088;
@@ -445,6 +466,9 @@ html, body {
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+    white-space: normal; /* Erlaubt Zeilenumbrüche */
+    overflow-wrap: break-word; /* Bricht lange Wörter um */
+    min-width: 0;
 }
 #media-video-row {
     align-items: stretch;
@@ -618,7 +642,7 @@ html, body {
 /* Utility und Media Queries */
 .text-main-content {
     line-height: 30px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .text-main-content a {
   color: #fff !important;
@@ -702,14 +726,14 @@ html, body {
 .previous-show-date {
   min-width: 110px;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: inter;
   padding: 0 5px;
 }
 .previous-show-location {
   flex: 1;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: inter;
   padding: 0 5px;
   text-align: left;
@@ -778,6 +802,7 @@ html, body {
         padding-top: 8px;
         padding-bottom: 8px;
     }
+    
 
     /* Allgemeine Abstände und Padding für Hauptcontainer auf Mobil */
     #about-section, #live, #previous-shows, #media, #contact, #footer-section {
@@ -821,17 +846,25 @@ html, body {
       text-align: left;
       padding: 0 5px; /* Hier angepasst, um Einrückung zu erhalten */
     }
-    #media {
-        padding-left: 10px;
-        padding-right: 10px;
+  
+    .desktop-long {
+        display: none !important;
     }
+
+    .mobile-short {
+        display: inline;
+    }
+
+    #soundcloud-player {
+        height: 220px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        display: block;
+        margin: 0 auto;
+    }
+
 }
 
-/* Social-Links: Kurzform nur auf Mobilgeräten */
-.desktop-long { display: inline; }
-.mobile-short { display: none; }
 
-@media (max-width: 1024px) {
-  .desktop-long { display: none !important; }
-  .mobile-short { display: inline !important; }
-}
+

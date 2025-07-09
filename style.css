@@ -726,19 +726,19 @@ html, body {
         display: block; /* Mobiles Bild auf Mobil anzeigen */
     }
     #band-name-title {
-        font-size: 2rem;
+        font-size: 5vh;
     }
 
     /* Navigation und Social Links */
     #social-link-instagram, #social-link-youtube, #social-link-soundcloud,
     #nav-link-live, #nav-link-media, #nav-link-contact {
-        font-size: 1rem;
+        font-size: 2vh;
         padding: 6px;
     }
 
     /* Footer */
     #footer-datenschutz-link, #footer-impressum-link, #copyright-text {
-        font-size: 0.75rem;
+        font-size: 1.4vh;
     }
 
     /* Media Section */
@@ -750,26 +750,31 @@ html, body {
     #image-gallery {
         height: 48vh; /* Galeriehöhe auf Mobil anpassen */
     }
-    #image-gallery img {
-        max-width: 90vw; /* Bilder auf Mobil schmaler machen */
-        height: auto; /* Höhe flexibel lassen */
-        object-fit: contain; /* Auf Mobil wieder "contain", um Verzerrungen zu vermeiden */
+    /*#image-gallery img {
+        max-width: 90vw; 
+        height: auto; 
+        object-fit: contain; 
         margin-right: 10px;
         scroll-snap-align: start;
     }
+	*/
 
 
     /* Textgrößen für Hauptinhalte */
     #about-text, #live-date-1, #live-date-2, #live-date-3, #live-link-1, #live-link-2, #live-link-3,
-    #previous-shows-list-text, #contact-info-text {
-        font-size: 2rem;
+    #previous-shows-list-text, #contact-info-text, .text-main-content {
+        font-size: 2vh;
         line-height: 1.5;
         padding: 5px 10px;
+    }
+    .live-show-date, .live-show-location, .live-show-link,
+    .previous-show-date, .previous-show-location {
+        font-size: 2vh;
     }
 
     /* Überschriften */
     #about-heading, #live-shows-heading, #media-heading, #contact-heading, #previous-shows-main-heading {
-        font-size: 1.7rem;
+        font-size: 2vh;
         padding-top: 8px;
         padding-bottom: 8px;
     }
@@ -794,7 +799,7 @@ html, body {
     .live-show-location,
     .live-show-link {
         width: 100%; /* Volle Breite */
-        font-size: 1rem; /* Kleinere Schriftgröße */
+        font-size: 2vh; /* Kleinere Schriftgröße */
         text-align: left; /* Alle Texte linksbündig auf Mobil */
         padding: 0 5px; /* Angleichen an Live Show Location Padding */
     }
@@ -805,16 +810,20 @@ html, body {
     }
     .previous-show-date {
       width: 100%;
-      font-size: 1rem;
+      font-size: 2vh;
       text-align: left;
       padding: 0 5px; /* Hier angepasst, um Einrückung zu erhalten */
       min-width: unset;
     }
     .previous-show-location {
       width: 100%;
-      font-size: 1rem;
+      font-size: 2vh;
       text-align: left;
       padding: 0 5px; /* Hier angepasst, um Einrückung zu erhalten */
+    }
+    #media {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 

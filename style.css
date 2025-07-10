@@ -265,7 +265,7 @@ html, body {
     flex-wrap: nowrap;
 }
 #about-content {
-    max-width: 1000px;
+    max-width: 65vw;
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -322,7 +322,7 @@ html, body {
     padding-right: 20px;
 }
 #live-shows-container {
-    max-width: 1000px;
+    max-width: 65vw;
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -392,7 +392,7 @@ html, body {
     padding-right: 20px;
 }
 #previous-shows-content-container {
-    max-width: 1000px;
+    max-width: 65vw;
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -401,7 +401,7 @@ html, body {
     flex: 1 1 0%;
 }
 #media-gallery-container {
-    max-width: 1000px;
+    max-width: 65vw;
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -439,7 +439,7 @@ html, body {
     padding-right: 20px;
 }
 #media-content-container {
-    max-width: 1000px;
+    max-width: 65vw;
     align-items: start;
     display: flex;
     flex-direction: column;
@@ -541,7 +541,7 @@ html, body {
     padding-right: 20px;
 }
 #contact-content-container {
-    max-width: 1000px;
+    max-width: 65vw;
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -606,7 +606,7 @@ html, body {
     padding-bottom: 20px;
 }
 #footer-content {
-    max-width: 1000px;
+    max-width: 65vw;
     display: flex;
     flex-direction: column;
 }
@@ -856,7 +856,7 @@ html, body {
     }
 
     #soundcloud-player {
-        height: 220px !important;
+        height: 100% !important;
         width: 100% !important;
         min-width: 0 !important;
         max-width: 100% !important;

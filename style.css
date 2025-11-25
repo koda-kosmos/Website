@@ -520,7 +520,7 @@ html, body {
     align-items: center; /* Vertikal zentriert in der Galerie */
 }
 
-#gallery-image-1, #gallery-image-2, #gallery-image-3, #gallery-image-4, #gallery-image-5, #gallery-image-6, #gallery-image-7, #gallery-image-8 {
+#gallery-image-1, #gallery-image-2, #gallery-image-3, #gallery-image-4, #gallery-image-5, #gallery-image-6, #gallery-image-7, #gallery-image-8, #gallery-image-9 {
     color: black;
     flex: 0 0 auto; /* Verhindert, dass Bilder schrumpfen */
     align-self: center; /* Stellt sicher, dass sie vertikal zentriert sind */

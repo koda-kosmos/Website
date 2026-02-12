@@ -153,9 +153,13 @@ html, body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     font-size: 5vh;
     pointer-events: none;
     font-family: hanson;
+    width: max-content;
+    max-width: calc(100vw - 20px);
+    box-sizing: border-box;
 }
 
 #hero-image-desktop,
@@ -438,25 +442,6 @@ html, body {
     padding-bottom: 10px;
     padding-left: 10px;
 }
-/* Previous Shows: ausklappbar auf Mobil */
-.previous-shows-details {
-    width: 100%;
-}
-.previous-shows-summary {
-    list-style: none;
-    cursor: pointer;
-    display: block;
-}
-.previous-shows-summary::-webkit-details-marker {
-    display: none;
-}
-.previous-shows-summary::marker {
-    display: none;
-}
-.previous-shows-summary::after {
-    content: '';
-    display: none;
-}
 #previous-shows-list-text {
     margin-bottom: 0px;
     text-align: left;
@@ -467,6 +452,23 @@ html, body {
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+}
+
+/* More-Button: nur auf Mobil sichtbar */
+.previous-shows-more-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fe015c;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 0;
+    text-align: left;
+    margin-top: 4px;
+}
+.previous-shows-more-btn:hover {
+    text-decoration: underline;
 }
 
 #media {
@@ -755,25 +757,32 @@ body.gallery-lightbox-open {
     overflow: hidden;
 }
 .gallery-lightbox-content {
-    max-width: 95vw;
-    max-height: 95vh;
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 4rem;
-    box-sizing: border-box;
+    padding: 0;
+    pointer-events: none;
 }
 .gallery-lightbox-content img {
-    max-width: 100%;
-    max-height: 90vh;
+    max-width: 100vw;
+    max-height: 100vh;
     width: auto;
     height: auto;
     object-fit: contain;
+    pointer-events: auto;
+}
+@supports (max-height: 100dvh) {
+    .gallery-lightbox-content img {
+        max-height: 100dvh;
+    }
 }
 .gallery-lightbox-close {
     position: absolute;
     top: clamp(0.35rem, 1.2vmin, 1rem);
     right: clamp(0.35rem, 1.2vmin, 1rem);
+    z-index: 10;
     width: clamp(28px, 6vmin, 40px);
     height: clamp(28px, 6vmin, 40px);
     border: none;
@@ -814,9 +823,11 @@ body.gallery-lightbox-open {
 }
 .gallery-lightbox-prev {
     left: clamp(0.35rem, 1.2vmin, 1rem);
+    z-index: 10;
 }
 .gallery-lightbox-next {
     right: clamp(0.35rem, 1.2vmin, 1rem);
+    z-index: 10;
 }
 
 .gjs-custom-code {
@@ -898,13 +909,6 @@ body.gallery-lightbox-open {
   text-align: left;
 }
 
-/* --- Desktop: Previous Shows immer sichtbar, Summary nicht klickbar wirkend --- */
-@media (min-width: 1049px) {
-    .previous-shows-summary {
-        cursor: default;
-    }
-}
-
 /* --- Responsive Design für Mobilgeräte (unter 1048px Breite) --- */
 /* Schriftgrößen in rem für stabile, lesbare Hierarchie (vh springt auf Mobile) */
 
@@ -916,9 +920,26 @@ body.gallery-lightbox-open {
     #hero-image-mobile {
         display: block; /* Mobiles Bild auf Mobil anzeigen */
     }
+    /* Hero auf iPhone: exakt eine Bildschirmhöhe, ohne Überhang */
+    #hero-section,
+    #hero-content,
+    #hero-image-desktop,
+    #hero-image-mobile {
+        height: 100dvh;
+        min-height: 0;
+    }
+    /* KODA KOSMOS auf iPhone zuverlässig mittig */
     #band-name-title {
         font-size: clamp(1.75rem, 6vw, 2.5rem);
         line-height: .9;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: max-content;
+        max-width: calc(100vw - 2rem);
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        top: 50%;
     }
 
     /* Navigation und Social Links – gut lesbar, tippfreundlich */
@@ -976,14 +997,38 @@ body.gallery-lightbox-open {
         padding: 5px;
     }
 
-    /* Live Shows Mobil: gleicher Stil wie Previous Shows, Button rechts */
+    /* About & Contact: Überschrift und Text exakt bündig */
+    #about-content,
+    #about-text-column,
+    #contact-content-container,
+    #contact-info-column {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Live Shows Mobil: bündig mit Headline (kein Extra-Padding links), kein Underlay */
+    #live-shows-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #live-shows-heading {
+        padding-left: 10px; /* = Section-Padding, einheitlicher Start */
+    }
+    #live-shows-list {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .live-show-row {
         display: grid;
         grid-template-columns: 1fr auto;
         grid-template-rows: auto auto auto;
         gap: 0.2rem 12px;
         align-items: center;
-        padding: 10px 10px 10px 14px;
+        padding: 10px;
+        background: transparent;
+    }
+    .live-show-row:hover {
+        background-color: transparent; /* kein farbiges Underlay auf Mobil */
     }
     .live-show-date {
         grid-column: 1;
@@ -1018,11 +1063,40 @@ body.gallery-lightbox-open {
         justify-content: flex-end;
         padding: 0 0 0 5px;
     }
+    /* Previous Shows mobil: nur 3 Shows sichtbar, More zeigt alle, bündig mit Headline */
+    #previous-shows-content-container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #previous-shows-main-heading {
+      padding-left: 10px;
+    }
+    #previous-shows-list-text {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     .previous-show-row {
       flex-direction: column;
       align-items: flex-start;
-      padding: 10px 10px 10px 14px;
+      padding: 10px 10px 10px 0;
       gap: 2px;
+    }
+    .previous-show-row-extra {
+      display: none;
+    }
+    #previous-shows-content-container.previous-shows-expanded .previous-show-row-extra {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 10px 10px 0;
+      gap: 2px;
+    }
+    .previous-shows-more-btn {
+      display: block;
+      padding-left: 0;
+    }
+    #previous-shows-content-container.previous-shows-expanded .previous-shows-more-btn {
+      display: none;
     }
     .previous-show-date {
       width: 100%;
@@ -1038,27 +1112,6 @@ body.gallery-lightbox-open {
       padding: 0;
     }
 
-    /* Previous Shows: auf Mobil eingeklappt, mit Pfeil zum Aufklappen */
-    .previous-shows-summary {
-      cursor: pointer;
-      padding-right: 2rem;
-      position: relative;
-    }
-    .previous-shows-summary::after {
-      display: inline-block;
-      content: '▼';
-      font-size: 1.1rem;
-      color: #fe015c;
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: transform 0.2s ease;
-    }
-    #previous-shows-details[open] .previous-shows-summary::after {
-      transform: translateY(-50%) rotate(180deg);
-    }
-  
     .desktop-long {
         display: none !important;
     }

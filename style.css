@@ -913,12 +913,26 @@ body.gallery-lightbox-open {
 /* Schriftgrößen in rem für stabile, lesbare Hierarchie (vh springt auf Mobile) */
 
 @media (max-width: 1048px) {
-    /* Hero Section */
+    /* Hero Section: Höhe = sichtbarer Viewport, Bild endet am unteren Rand und bleibt mittig */
+    #hero-section,
+    #hero-content {
+        height: 100vh;
+        height: 100svh;
+        min-height: 0;
+    }
     #hero-image-desktop {
         display: none; /* Desktop-Bild auf Mobil ausblenden */
     }
     #hero-image-mobile {
         display: block; /* Mobiles Bild auf Mobil anzeigen */
+    }
+    #hero-image-desktop,
+    #hero-image-mobile {
+        height: 100%;
+        width: 100%;
+        max-width: none;
+        object-fit: cover;
+        object-position: center center;
     }
     /* KODA KOSMOS auf iPhone zuverlässig mittig */
     #band-name-title {

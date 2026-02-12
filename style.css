@@ -2,10 +2,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     margin: 0;
-   padding: 0;
-    background: #000;
+    padding: 0;
+    background: #141414;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 @font-face {
@@ -47,17 +53,13 @@ html, body {
 }
 
 #main-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 1) 100%);
-    background-position: 0px 0px;
-    background-size: 100% 100%;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-origin: padding-box;
+    background-color: #141414;
+    background-image: none;
     color: #000000;
     font-weight: 400;
     max-width: 100%;
     overflow-x: hidden;
-    font-family: inter;
+    font-family: 'Space Mono', monospace;
     src: url(inter.ttf);
 }
 
@@ -83,53 +85,54 @@ html, body {
 }
 
 #social-link-instagram {
-    color: #ff0088;
+    color: #fe015c;
     padding: 10px;
     position: static;
     z-index: 4;
     font-weight: 600;
-    font-size: 1vmax ;
+    font-size: 1.3vmax;
     text-align: left;
     flex: 0 1 15%;
     font-family: hanson;
 }
 #social-link-youtube {
-    color: #ff0088;
+    color: #fe015c;
     padding: 10px;
     position: static;
     z-index: 4;
     font-weight: 600;
-    font-size: 1vmax ;
+    font-size: 1.3vmax;
     text-align: center;
     flex: 0 1 15%;
     font-family: hanson;
 }
 #social-link-soundcloud {
-    color: #ff0088;
+    color: #fe015c;
     padding: 10px;
     position: static;
     z-index: 4;
     font-weight: 600;
-    font-size: 1vmax ;
+    font-size: 1.3vmax;
     text-align: right;
     flex: 0 1 15%;
     font-family: hanson;
 }
 #social-link-instagram:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
 }
 #social-link-youtube:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
 }
 #social-link-soundcloud:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
 }
 
 .desktop-long { display: inline; }
 .mobile-short { display: none; }
 
 #hero-section, #hero-content {
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     height: 100vh;
     min-height: 400px;
     position: relative;
@@ -139,13 +142,12 @@ html, body {
     justify-content: center;
     flex-direction: column;
     padding: 0;
-    
 }
 
 #band-name-title {
     position: absolute;
     z-index: 2;
-    color: #ff0088;
+    color: #fe015c;
     font-weight: 600;
     text-align: center;
     left: 50%;
@@ -158,7 +160,8 @@ html, body {
 
 #hero-image-desktop,
 #hero-image-mobile {
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     height: 100vh;
     object-fit: cover;
     object-position: center;
@@ -168,13 +171,7 @@ html, body {
     z-index: 0;
     margin: 0;
     padding: 0;
-}
-
-#hero-image-desktop:hover {
-    filter: unset;
-}
-#hero-image-mobile:hover {
-    filter: unset;
+    filter: grayscale(100%);
 }
 
 /* Standardmäßig Desktop-Bild anzeigen, Mobile-Bild ausblenden */
@@ -205,14 +202,14 @@ html, body {
     align-content: stretch;
     gap: 0px;
     align-items: flex-start;
-    border-top-color: #ff0088;
-    border-right-color: #ff0088;
-    border-bottom-color: #ff0088;
-    border-left-color: #ff0088;
+    border-top-color: #fe015c;
+    border-right-color: #fe015c;
+    border-bottom-color: #fe015c;
+    border-left-color: #fe015c;
     padding-bottom: 0px;
 }
 #nav-link-live {
-    color: #ff0088;
+    color: #fe015c;
     padding: 10px;
     position: static;
     z-index: 4;
@@ -221,10 +218,10 @@ html, body {
     align-self: auto;
     transition: color 0.3s ease 0s;
     font-family: hanson;
-    font-size: 1vmax ;
+    font-size: 1.3vmax;
 }
 #nav-link-media {
-    color: #ff0088;
+    color: #fe015c;
     padding: 10px;
     position: static;
     z-index: 4;
@@ -233,10 +230,10 @@ html, body {
     align-self: auto;
     transition: color 0.3s ease 0s;
     font-family: hanson;
-    font-size: 1vmax ;
+    font-size: 1.3vmax;
 }
 #nav-link-contact {
-    color: #ff0088;
+    color: #fe015c;
     padding: 10px;
     position: static;
     z-index: 4;
@@ -244,22 +241,22 @@ html, body {
     flex: 0 0 15%;
     align-self: auto;
     font-family: hanson;
-    font-size: 1vmax ;
+    font-size: 1.3vmax;
 }
 #nav-link-live:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
 }
 #nav-link-media:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
 }
 #nav-link-contact:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
 }
 
 #about-section {
     justify-content: center;
     padding-top: 80px;
-    padding-bottom: 20px;
+    padding-bottom: 48px;
     padding-left: 20px;
     padding-right: 20px;
     flex-wrap: nowrap;
@@ -277,7 +274,7 @@ html, body {
     font-size: 2rem;
     font-family: hanson;
     text-align: left;
-    color: #ff0088;
+    color: #fe015c;
     flex: 0 0 auto;
     padding-top: 10px;
     padding-right: 10px;
@@ -292,7 +289,7 @@ html, body {
     flex: 1 1 0%;
 }
 #about-text {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
     flex: 1 1 0%;
     font-size: 1rem;
     padding-top: 10px;
@@ -302,9 +299,9 @@ html, body {
 }
 #soundcloud-embed-container {
     padding-top: 5px;
-    padding-right: 5px;
+    padding-right: 10px;
     padding-bottom: 5px;
-    padding-left: 0px;
+    padding-left: 10px;
 }
 #soundcloud-player {
     background-color: black;
@@ -316,8 +313,8 @@ html, body {
 
 #live {
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -330,19 +327,11 @@ html, body {
     align-self: auto;
     flex: 1 1 0%;
 }
-#divider-live-shows-top {
-    background-color: #ff0088;
-    height: 2px;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: -18px;
-    display: none;
-}
 #live-shows-heading {
     font-size: 2rem;
     font-family: hanson;
     text-align: left;
-    color: #ff0088;
+    color: #fe015c;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
@@ -352,42 +341,72 @@ html, body {
 /* Live Shows: Desktop-Ansicht */
 #live-shows-list {
     display: flex;
-    flex-direction: column; /* Standardmäßig untereinander für bessere Kontrolle */
-    gap: 10px; /* Abstand zwischen den Konzertzeilen */
-    padding: 0 10px; /* Etwas Padding für den gesamten Listen-Container */
+    flex-direction: column;
+    gap: 0;
+    padding: 0 10px;
 }
 
+/* Live Shows: Trennlinie & Hover (ohne linke Linie) */
 .live-show-row {
-    display: flex; /* Flexbox für nebeneinanderliegende Elemente */
-    justify-content: space-between; /* Verteilt die Elemente gleichmäßig */
-    align-items: center; /* Vertikal zentriert */
-    border-bottom: 1px solid #ff0088; /* Trennlinie */
-    padding: 8px 0; /* Vertikaler Abstand innerhalb der Zeile */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px 10px 10px;
+    transition: background-color 0.2s ease;
 }
 
-.live-show-date,
-.live-show-location,
-.live-show-link {
-    flex: 1; /* Nimmt gleichen Platz ein */
+.live-show-row:hover {
+    background-color: rgba(254, 1, 92, 0.06);
+}
+
+.live-show-date {
+    min-width: 100px;
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: bold;
+    padding: 0 16px 0 0;
+    text-align: left;
+}
+
+.live-show-title,
+.live-show-location {
+    flex: 1;
     font-size: 1rem;
-    color: #fff;
-    padding: 0 5px; /* Kleiner horizontaler Abstand */
-    text-align: left; /* Text linksbündig */
+    color: rgba(255, 255, 255, 0.92);
+    padding: 0 5px;
+    text-align: left;
 }
 
 .live-show-link {
-    text-align: right; /* Link rechtsbündig für Desktop */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .live-show-link a {
-    color: #ffffff;
-    text-decoration: underline;
+    display: inline-block;
+    min-width: 110px;
+    padding: 8px 16px;
+    background: #fe015c;
+    color: #141414;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.2s ease;
+    box-sizing: border-box;
+}
+
+.live-show-link a:hover {
+    opacity: 0.9;
 }
 
 #previous-shows {
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -413,16 +432,35 @@ html, body {
     font-size: 2rem;
     font-family: hanson;
     text-align: left;
-    color: #ff0088;
+    color: #fe015c;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
 }
+/* Previous Shows: ausklappbar auf Mobil */
+.previous-shows-details {
+    width: 100%;
+}
+.previous-shows-summary {
+    list-style: none;
+    cursor: pointer;
+    display: block;
+}
+.previous-shows-summary::-webkit-details-marker {
+    display: none;
+}
+.previous-shows-summary::marker {
+    display: none;
+}
+.previous-shows-summary::after {
+    content: '';
+    display: none;
+}
 #previous-shows-list-text {
     margin-bottom: 0px;
     text-align: left;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
     flex: 1 1 0%;
     font-size: 1rem;
     padding-top: 10px;
@@ -433,8 +471,8 @@ html, body {
 
 #media {
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -449,25 +487,17 @@ html, body {
     width: 100%; 
     min-width: 0;
 }
-#divider-media-top {
-    background-color: #ff0088;
-    height: 2px;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: -18px;
-    display: none;
-}
 #media-heading {
     font-size: 2rem;
     font-family: hanson;
     text-align: left;
-    color: #ff0088;
+    color: #fe015c;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
-    white-space: normal; /* Erlaubt Zeilenumbrüche */
-    overflow-wrap: break-word; /* Bricht lange Wörter um */
+    white-space: normal;
+    overflow-wrap: break-word;
     min-width: 0;
 }
 #media-video-row {
@@ -491,24 +521,23 @@ html, body {
     flex: 0 0 auto;
     align-content: flex-start;
     padding-top: 0px;
-    padding-right: 0px;
+    padding-right: 10px;
     padding-bottom: 0px;
-    padding-left: 0px;
+    padding-left: 10px;
 }
 #image-gallery {
-    padding: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
     grid-template-rows: 1fr;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-    overflow-x: scroll; /* Nur horizontal scrollbar machen */
-    overflow-y: hidden; /* Vertikales Scrollen verhindern */
-    height: auto; /* Höhe wird durch Bilder bestimmt, nicht fest */
-    scroll-snap-type: x mandatory; /* Horizontal schnappen */
+    overflow-x: scroll;
+    overflow-y: visible;
+    min-height: 280px;
+    height: auto;
+    scroll-snap-type: x mandatory;
     scroll-padding: 1rem;
-    padding-top: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 0rem;
-    padding-left: 0rem;
     position: relative;
     backface-visibility: visible;
     display: flex;
@@ -516,27 +545,35 @@ html, body {
     justify-content: flex-start;
     flex-direction: row;
     transform-style: flat;
-    padding-bottom: 1rem;
-    align-items: center; /* Vertikal zentriert in der Galerie */
+    align-items: center;
 }
 
-#gallery-image-1, #gallery-image-2, #gallery-image-3, #gallery-image-4, #gallery-image-5, #gallery-image-6, #gallery-image-7, #gallery-image-8, #gallery-image-9 {
-    color: black;
-    flex: 0 0 auto; /* Verhindert, dass Bilder schrumpfen */
-    align-self: center; /* Stellt sicher, dass sie vertikal zentriert sind */
+#image-gallery .gallery-item {
+    cursor: pointer;
+    flex: 0 0 auto;
     scroll-snap-align: center;
-    display: inline-block;
-    height: 70vh; /* Feste Höhe für alle Galeriebilder auf Desktop */
-    width: auto; /* Breite automatisch anpassen, um Seitenverhältnis zu erhalten */
-    object-fit: cover; /* Füllt den Bereich aus, schneidet ggf. Ränder ab */
-    margin-right: 20px; /* Abstand zwischen den Bildern */
-    max-width: none; /* Entfernt die max-width-Beschränkung, falls sie stört */
+    margin-right: 20px;
+    line-height: 0;
+}
+#image-gallery .gallery-item:last-child {
+    margin-right: 0;
+}
+
+#gallery-image-1, #gallery-image-2, #gallery-image-3, #gallery-image-4, #gallery-image-5, #gallery-image-6, #gallery-image-7, #gallery-image-8, #gallery-image-9, #gallery-image-10, #gallery-image-11 {
+    color: black;
+    display: block;
+    height: 70vh;
+    max-height: 500px;
+    width: auto;
+    object-fit: contain;
+    max-width: none;
+    vertical-align: middle;
 }
 
 #contact {
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -549,18 +586,11 @@ html, body {
     align-self: auto;
     flex: 1 1 0%;
 }
-#divider-contact-top {
-    background-color: #ff0088;
-    height: 2px;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: -18px;
-}
 #contact-heading {
     font-size: 2rem;
     font-family: hanson;
     text-align: left;
-    color: #ff0088;
+    color: #fe015c;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
@@ -576,7 +606,7 @@ html, body {
 #contact-info-text {
     margin-bottom: 0px;
     text-align: left;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
     flex: 1 1 0%;
     font-size: 1rem;
     padding-top: 10px;
@@ -591,11 +621,11 @@ html, body {
     /* keine speziellen Styles */
 }
 #mail-link {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
     text-decoration-line: underline;
 }
 #phone-link {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.92);
 }
 
 #footer-section {
@@ -609,6 +639,33 @@ html, body {
     max-width: 1023px;
     display: flex;
     flex-direction: column;
+}
+#footer-social-icons {
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#footer-social-icons-column {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+.footer-social-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.footer-social-icon {
+    font-size: 22px;
+    color: #fe015c;
+}
+.footer-social-link:hover .footer-social-icon {
+    color: rgba(255, 255, 255, 0.92)fff;
 }
 #footer-links-row {
     flex-direction: column;
@@ -626,17 +683,25 @@ html, body {
 #footer-datenschutz-link {
     display: block;
     color: rgba(255, 255, 255, 0.38);
+    text-decoration: none;
 }
 #footer-impressum-link {
     display: block;
     color: rgba(255, 255, 255, 0.38);
+    text-decoration: none;
 }
 #copyright-text {
     padding: 10px;
     text-align: center;
     font-size: 0.8rem;
     opacity: 75%;
-    color: #ff0088;
+    color: #fe015c;
+}
+
+/* Footer-Links: kein blaues Unterstreichen bei Hover */
+#footer-section .gjs-link:hover {
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
 }
 
 /* Utility und Media Queries */
@@ -645,7 +710,7 @@ html, body {
     font-size: 1rem;
 }
 .text-main-content a {
-  color: #fff !important;
+  color: rgba(255, 255, 255, 0.92) !important;
   text-decoration: underline;
 }
 .gallery {
@@ -668,6 +733,92 @@ html, body {
 .gallery div:hover img:nth-child(2) {
     visibility: visible;
 }
+
+/* Gallery Fullscreen Lightbox / Carousel */
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.gallery-lightbox[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+}
+body.gallery-lightbox-open {
+    overflow: hidden;
+}
+.gallery-lightbox-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 4rem;
+    box-sizing: border-box;
+}
+.gallery-lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+.gallery-lightbox-close {
+    position: absolute;
+    top: clamp(0.35rem, 1.2vmin, 1rem);
+    right: clamp(0.35rem, 1.2vmin, 1rem);
+    width: clamp(28px, 6vmin, 40px);
+    height: clamp(28px, 6vmin, 40px);
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: clamp(1.1rem, 2.8vmin, 1.5rem);
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+.gallery-lightbox-close:hover {
+    color: #fff;
+}
+.gallery-lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(32px, 7vmin, 44px);
+    height: clamp(32px, 7vmin, 44px);
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: clamp(1.25rem, 3.2vmin, 1.75rem);
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+.gallery-lightbox-arrow:hover {
+    color: #fff;
+}
+.gallery-lightbox-prev {
+    left: clamp(0.35rem, 1.2vmin, 1rem);
+}
+.gallery-lightbox-next {
+    right: clamp(0.35rem, 1.2vmin, 1rem);
+}
+
 .gjs-custom-code {
     padding: 5px;
 }
@@ -717,29 +868,45 @@ html, body {
     border-left-color: rgba(0, 0, 0, 0.06);
 }
 
+/* Previous Shows: Zeilen mit Trennlinie & Hover (ohne linke Linie) */
 .previous-show-row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 6px 0;
+  padding: 10px 12px 10px 14px;
+  margin-bottom: 0;
+  transition: background-color 0.2s ease;
+}
+.previous-show-row:hover {
+  background-color: rgba(254, 1, 92, 0.06);
 }
 .previous-show-date {
-  min-width: 110px;
-  color: #fff;
-  font-size: 1rem;
-  font-family: inter;
-  padding: 0 5px;
+  min-width: 100px;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: bold;
+  font-size: 0.95rem;
+  font-family: 'Space Mono', monospace;
+  padding: 0 16px 0 0;
+  flex-shrink: 0;
 }
 .previous-show-location {
   flex: 1;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.92);
   font-size: 1rem;
-  font-family: inter;
-  padding: 0 5px;
+  font-family: 'Space Mono', monospace;
+  padding: 0 5px 0 0;
   text-align: left;
 }
 
+/* --- Desktop: Previous Shows immer sichtbar, Summary nicht klickbar wirkend --- */
+@media (min-width: 1049px) {
+    .previous-shows-summary {
+        cursor: default;
+    }
+}
+
 /* --- Responsive Design für Mobilgeräte (unter 1048px Breite) --- */
+/* Schriftgrößen in rem für stabile, lesbare Hierarchie (vh springt auf Mobile) */
 
 @media (max-width: 1048px) {
     /* Hero Section */
@@ -750,19 +917,20 @@ html, body {
         display: block; /* Mobiles Bild auf Mobil anzeigen */
     }
     #band-name-title {
-        font-size: 5vh;
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        line-height: .9;
     }
 
-    /* Navigation und Social Links */
+    /* Navigation und Social Links – gut lesbar, tippfreundlich */
     #social-link-instagram, #social-link-youtube, #social-link-soundcloud,
     #nav-link-live, #nav-link-media, #nav-link-contact {
-        font-size: 2vh;
+        font-size: 0.9375rem;
         padding: 6px;
     }
 
-    /* Footer */
+    /* Footer – kleiner, aber lesbar */
     #footer-datenschutz-link, #footer-impressum-link, #copyright-text {
-        font-size: 1.4vh;
+        font-size: 0.75rem;
     }
 
     /* Media Section */
@@ -772,33 +940,28 @@ html, body {
         margin: 0 auto;
     }
     #image-gallery {
-        height: 48vh; /* Galeriehöhe auf Mobil anpassen */
+        min-height: 220px;
     }
-    /*#image-gallery img {
-        max-width: 90vw; 
-        height: auto; 
-        object-fit: contain; 
-        margin-right: 10px;
-        scroll-snap-align: start;
+    #image-gallery .gallery-item img {
+        max-height: 50vh !important;
+        height: auto !important;
     }
-	*/
 
-
-    /* Textgrößen für Hauptinhalte */
+    /* Fließtext – einheitliche Basisgröße */
     #about-text, #live-date-1, #live-date-2, #live-date-3, #live-link-1, #live-link-2, #live-link-3,
     #previous-shows-list-text, #contact-info-text, .text-main-content {
-        font-size: 2vh;
+        font-size: 1rem;
         line-height: 1.5;
         padding: 5px 10px;
     }
     .live-show-date, .live-show-location, .live-show-link,
     .previous-show-date, .previous-show-location {
-        font-size: 2vh;
+        font-size: 1rem;
     }
 
-    /* Überschriften */
+    /* Überschriften – klar größer als Fließtext */
     #about-heading, #live-shows-heading, #media-heading, #contact-heading, #previous-shows-main-heading {
-        font-size: 2vh;
+        font-size: 1.5rem;
         padding-top: 8px;
         padding-bottom: 8px;
     }
@@ -813,38 +976,87 @@ html, body {
         padding: 5px;
     }
 
-    /* Live Shows Spaltenlayout für Mobil */
+    /* Live Shows Mobil: gleicher Stil wie Previous Shows, Button rechts */
     .live-show-row {
-        flex-direction: column; /* Auf Mobil untereinander */
-        gap: 0.2rem; /* Kleinerer Abstand */
-        align-items: flex-start; /* Links ausgerichtet */
-        padding: 5px 0; /* Angepasstes Padding */
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        gap: 0.2rem 12px;
+        align-items: center;
+        padding: 10px 10px 10px 14px;
     }
-    .live-show-date,
-    .live-show-location,
+    .live-show-date {
+        grid-column: 1;
+        grid-row: 1;
+        width: auto;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.92);
+        text-align: left;
+        padding: 0;
+    }
+    .live-show-title {
+        grid-column: 1;
+        grid-row: 2;
+        width: auto;
+        font-size: 1rem;
+        text-align: left;
+        padding: 0;
+    }
+    .live-show-location {
+        grid-column: 1;
+        grid-row: 3;
+        width: auto;
+        font-size: 1rem;
+        text-align: left;
+        padding: 0;
+    }
     .live-show-link {
-        width: 100%; /* Volle Breite */
-        font-size: 2vh; /* Kleinere Schriftgröße */
-        text-align: left; /* Alle Texte linksbündig auf Mobil */
-        padding: 0 5px; /* Angleichen an Live Show Location Padding */
+        grid-column: 2;
+        grid-row: 1 / -1;
+        align-self: center;
+        width: auto;
+        justify-content: flex-end;
+        padding: 0 0 0 5px;
     }
     .previous-show-row {
       flex-direction: column;
       align-items: flex-start;
-      padding: 5px 0;
+      padding: 10px 10px 10px 14px;
+      gap: 2px;
     }
     .previous-show-date {
       width: 100%;
-      font-size: 2vh;
+      font-size: 1rem;
       text-align: left;
-      padding: 0 5px; /* Hier angepasst, um Einrückung zu erhalten */
+      padding: 0;
       min-width: unset;
     }
     .previous-show-location {
       width: 100%;
-      font-size: 2vh;
+      font-size: 1rem;
       text-align: left;
-      padding: 0 5px; /* Hier angepasst, um Einrückung zu erhalten */
+      padding: 0;
+    }
+
+    /* Previous Shows: auf Mobil eingeklappt, mit Pfeil zum Aufklappen */
+    .previous-shows-summary {
+      cursor: pointer;
+      padding-right: 2rem;
+      position: relative;
+    }
+    .previous-shows-summary::after {
+      display: inline-block;
+      content: '▼';
+      font-size: 1.1rem;
+      color: #fe015c;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.2s ease;
+    }
+    #previous-shows-details[open] .previous-shows-summary::after {
+      transform: translateY(-50%) rotate(180deg);
     }
   
     .desktop-long {

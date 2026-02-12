@@ -920,14 +920,6 @@ body.gallery-lightbox-open {
     #hero-image-mobile {
         display: block; /* Mobiles Bild auf Mobil anzeigen */
     }
-    /* Hero auf iPhone: exakt eine Bildschirmhöhe, ohne Überhang */
-    #hero-section,
-    #hero-content,
-    #hero-image-desktop,
-    #hero-image-mobile {
-        height: 100dvh;
-        min-height: 0;
-    }
     /* KODA KOSMOS auf iPhone zuverlässig mittig */
     #band-name-title {
         font-size: clamp(1.75rem, 6vw, 2.5rem);
@@ -942,7 +934,12 @@ body.gallery-lightbox-open {
         top: 50%;
     }
 
-    /* Navigation und Social Links – gut lesbar, tippfreundlich */
+    /* Navigation und Social Links – gut lesbar, tippfreundlich und näher am Rand */
+    #main-nav-links,
+    #social-links {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
     #social-link-instagram, #social-link-youtube, #social-link-soundcloud,
     #nav-link-live, #nav-link-media, #nav-link-contact {
         font-size: 0.9375rem;
